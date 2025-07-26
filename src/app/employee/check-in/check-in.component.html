@@ -1,0 +1,24 @@
+<div class="checkin-container">
+  <mat-card>
+    <mat-card-title>Daily Check-In</mat-card-title>
+    <mat-card-content>
+      <div *ngIf="loading">Loading...</div>
+      <div *ngIf="!loading">
+        <div *ngIf="checkedIn">
+          <span>You have checked in 
+            {{ checkInTime ? ' at ' + (checkInTime | date: 'shortTime') : '' }}.</span>
+        </div>
+        <div *ngIf="!checkedIn">
+          <button mat-raised-button color="primary" (click)="onCheckIn()" [disabled]="!canCheckIn || loading">
+            {{ loading ? 'Checking in...' : 'Check In' }}
+          </button>
+          <div *ngIf="!canCheckIn" class="error-msg">
+            You can only check in between 7:30 AM and 9:00 AM.
+          </div>
+        </div>
+        <mat-error *ngIf="error">{{ error }}</mat-error>
+        <mat-hint *ngIf="success">{{ success }}</mat-hint>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

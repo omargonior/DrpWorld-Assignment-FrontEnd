@@ -1,0 +1,28 @@
+.employee-form-container {
+  padding: 16px;
+}
+mat-card {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.full-width {
+  width: 100%;
+}
+.signature-upload {
+  margin: 16px 0;
+}
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+img {
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.success-msg {
+  color: #388e3c;
+  margin-top: 8px;
+  font-weight: 500;
+}

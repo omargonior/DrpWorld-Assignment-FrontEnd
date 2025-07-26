@@ -1,0 +1,22 @@
+.attendance-history-container {
+  padding: 16px;
+}
+mat-card {
+  margin: 0 auto;
+  max-width: 700px;
+}
+mat-card-title{
+  padding: 10px;
+}
+.filter-row {
+  margin-bottom: 16px;
+}
+table {
+  width: 100%;
+}
+.weekly-summary {
+  margin-bottom: 16px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+}

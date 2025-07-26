@@ -1,0 +1,11 @@
+.checkin-container {
+  padding: 16px;
+}
+mat-card {
+  margin: 0 auto;
+  max-width: 400px;
+}
+.error-msg {
+  color: #d32f2f;
+  margin-top: 8px;
+}

@@ -1,0 +1,31 @@
+.sidenav-container {
+  height: 100vh;
+}
+.sidenav {
+  width: 220px;
+}
+.dashboard-content {
+  padding: 24px;
+}
+.hide-desktop {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sidenav {
+    width: 0;
+  }
+  .hide-desktop {
+    display: inline-flex;
+  }
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.welcome {
+  margin-right: 16px;
+  font-weight: 500;
+}
+.active-link {
+  font-weight: bold;
+  color: #1976d2;
+}

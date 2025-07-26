@@ -1,0 +1,28 @@
+<div class="profile-container">
+  <mat-card>
+    <mat-card-title>  My Profile</mat-card-title>
+    <mat-card-content *ngIf="profile">
+      <div class="profile-info">
+        <div><strong>First Name:</strong> {{ profile.firstName }}</div>
+        <div><strong>Last Name:</strong> {{ profile.lastName }}</div>
+        <div><strong>Phone Number:</strong> {{ profile.phoneNumber }}</div>
+        <div><strong>National ID:</strong> {{ profile.nationalId }}</div>
+        <div><strong>Age:</strong> {{ profile.age }}</div>
+        <div *ngIf="!profile.signatureUrl">
+          <label>Add Signature:</label>
+          <input type="file" accept="image/*" (change)="onSignatureFileChange($event)">
+          <br>  <br>  
+          <button mat-raised-button color="primary" (click)="saveSignature()" [disabled]="!signatureFile">Save Signature</button>
+        </div>
+        <img *ngIf="profile.signatureUrl" [src]="profile.signatureUrl" alt="Signature" width="120">
+      </div>
+      <div class="attendance-summary" *ngIf="weeklySummary">
+        <h3>Weekly Attendance Summary</h3>
+        <div><strong>Total Days Present:</strong> {{ weeklySummary.daysPresent }}</div>
+        <div><strong>Total Hours:</strong> {{ weeklySummary.totalHours }}</div>
+      </div>
+    </mat-card-content>
+    <mat-card-content *ngIf="loading">Loading...</mat-card-content>
+    <mat-card-content *ngIf="error">{{ error }}</mat-card-content>
+  </mat-card>
+</div>

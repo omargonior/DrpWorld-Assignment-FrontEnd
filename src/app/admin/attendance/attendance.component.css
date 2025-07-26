@@ -1,0 +1,13 @@
+.attendance-container {
+  padding: 16px;
+}
+mat-card {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.filter-row {
+  margin-bottom: 16px;
+}
+table {
+  width: 100%;
+}
